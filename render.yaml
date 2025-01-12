@@ -17,5 +17,5 @@ services:
       - key: API_PASSWORD
         sync: false
       - key: TRANSPORT_ROUTES
-        sync: false
+        sync: { "all://*.ichigotv.net": { "verify_ssl": false }, "all://ichigotv.net": { "verify_ssl": false } }
 
