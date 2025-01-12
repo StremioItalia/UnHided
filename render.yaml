@@ -4,7 +4,7 @@ services:
     name: MFP  
     runtime: Dockerfile 
     buildCommand:  
-    startCommand: python3 run.py  
+    startCommand: ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "8888", "--workers", "4"]
     plan: free 
     region: frankfurt
     envVars:
