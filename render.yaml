@@ -2,7 +2,7 @@
 services:
   - type: web
     name: MFP  
-    runtime: Dockerfile 
+    runtime: python 
     buildCommand: pip install --no-cache-dir -r requirements.txt 
     startCommand: python3 run.py
     plan: free 
