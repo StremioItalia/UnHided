@@ -4,7 +4,7 @@ services:
     name: MFP  
     runtime: Dockerfile 
     buildCommand:  
-    startCommand: ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "8888", "--workers", "4"]
+    startCommand: python3 run.py
     plan: free 
     region: frankfurt
     envVars:
@@ -17,5 +17,5 @@ services:
       - key: API_PASSWORD
         sync: false
       - key: TRANSPORT_ROUTES
-        sync: { "all://*.ichigotv.net": { "verify_ssl": false }, "all://ichigotv.net": { "verify_ssl": false } }
+        sync: false
 
